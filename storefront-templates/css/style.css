@@ -1,0 +1,711 @@
+html {line-height: 1.15;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-webkit-font-smoothing: antialiased;}
+* {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:focus {outline: none;}
+a:hover {outline: none;text-decoration: none;}
+article, aside, footer, header, nav, section {display: block;}
+h1 {font-size: 2em;margin: 0;}
+h1,h2,h3,h4,h5,h6 {margin: 0;}
+figcaption, figure, main {display: block;}
+figure {margin: 1em 40px;}
+hr {box-sizing: content-box;height: 0;overflow: visible;}
+pre {font-family: monospace, monospace;font-size: 1em;}
+a {background-color: transparent;-webkit-text-decoration-skip: objects;text-decoration: none;font-style: 14px;display: inline-block;}
+abbr[title] {border-bottom: none;text-decoration: underline;text-decoration: underline dotted;}
+code, kbd, samp {font-family: monospace, monospace;font-size: 1em;}
+dfn {font-style: italic;}
+mark {background-color: #ff0;color: #000;}
+small {font-size: 80%;}
+sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;}
+sub {bottom: -0.25em;}
+sup {top: -0.5em;}
+audio, video {display: inline-block;}
+audio:not([controls]) {display: none;height: 0;}
+img {border-style: none;max-width: 100%;display: block;}
+svg:not(:root) {overflow: hidden;}
+ol, ul {list-style: none;margin: 0;padding: 0;}
+ol::after, ul::after {content: '';display: block;clear: both;}
+p {margin: 0;}
+button, input, optgroup, select, textarea {font-family: inherit;font-size: 100%;line-height: 1.15;margin: 0;background: none;outline: none;}
+button, input {overflow: visible;}
+button,select {text-transform: none;}
+button {cursor: pointer;}
+button img{min-width: 10px;}
+button,html [type="button"], [type="reset"], [type="submit"] {-webkit-appearance: button;}
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {border-style: none;padding: 0;}
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {outline: 1px dotted ButtonText;}
+fieldset {padding: 0.35em 0.75em 0.625em;}
+legend {box-sizing: border-box;color: inherit;display: table;max-width: 100%;padding: 0;white-space: normal;}
+progress {display: inline-block;vertical-align: baseline;}
+textarea {overflow: auto;}
+[type="checkbox"], [type="radio"] {box-sizing: border-box;padding: 0;}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none;}
+[type="search"] {-webkit-appearance: textfield;outline-offset: -2px;}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+::-webkit-file-upload-button {-webkit-appearance: button;font: inherit;}
+details, menu {display: block;}
+summary {display: list-item;}
+canvas {display: inline-block;}
+template {display: none;}
+[hidden] {display: none;}
+
+body {margin: 0;width: 100%;font-family: 'Montserrat', sans-serif;max-width: 1920px;margin: auto;}
+body.scrollOff{overflow: hidden;}
+
+#cookieArea{display:none ;}
+.cookiePolicy {position: fixed;bottom: 0;right: 0;left: 0;top: 0;z-index: 999;}
+.cookiePolicy:before {content: '';position: absolute;right: 0;left: 0;top: 0;bottom: 0;background: #00000091;z-index: -1;}
+.cookiePolicy .wrapper {position: absolute;bottom: 20vh;right: 0;left: 0;width: 80vw;margin: auto;background: white;padding: 30px;text-align: center;}
+.cookiePolicy .wrapper button {margin: 20px;background: black;border: none;padding: 15px 30px;color: white;font-size: 14px;font-weight: 500;}
+.cookiePolicy .wrapper a {position: absolute;right: 10px;bottom: 6px;font-size: 14px;color: #bdbdbd;transition: all ease .4s;text-decoration: underline black;}
+.cookiePolicy .wrapper a:hover {color: black;text-decoration: underline gainsboro;}
+
+
+.welcomeBanner {position: absolute;z-index: 999;right: 0;left: 0;top: 0;bottom: 0;display: none;align-items: center;justify-content: center;}
+
+.welcomeBanner:before {content: '';position: absolute;right: 0;left: 0;top: 0;bottom: 0;z-index: -1;background: #00000085;}
+
+header {}
+header .nav {padding: 30px;display: flex;align-items: center;}
+header .nav > .menu {position: relative;}
+header .nav > a {width: 290px;margin-left: 50px;}
+header .nav > .userInteractive {margin-left: auto;display: flex;font-weight: 500;}
+header .nav > .userInteractive .search {width: 20px;margin-right: 20px;cursor: pointer;position: relative;}
+header .nav > .userInteractive > a {margin-right: 20px;color: black;}
+header .nav > .userInteractive .cart a{color: black}
+footer {padding: 0px 30px;margin: auto;margin-top: 90px;max-width: 1320px;margin-bottom: 50px;}
+footer ul {}
+footer ul li {font-size: 13px;font-weight: 500;margin-bottom: 0px;}
+footer ul li a {color: black;}
+footer ul li a:hover {color: #927442;}
+footer div.subscribe {min-width: 250px;}
+footer div.subscribe p {font-size: 14px;font-weight: 500;margin-bottom: 7px;}
+footer div.subscribe form {display: flex;position: relative;max-width: 270px;}
+footer div.subscribe form input {border: 1px solid black;padding: 6px;font-size: 15px;width: 100%;padding-right: 89px;}
+footer div.subscribe form button {font-size: 13px;font-weight: 600;border: 0;position: absolute;right: 0;top: 50%;transform: translateY(-50%);padding: 4px;border-left: 1px solid black;}
+
+header .nav > .userInteractive .search .searchWrapper {position: absolute;right: calc(100% + 15px);top: 50%;transform: translateY(-50%);opacity: 0;visibility: hidden;transition: all ease .4s;}
+header .nav > .userInteractive .search .searchWrapper input {width: 250px;border: 2px solid black;padding: 10px;padding-right: 81px;font-size: 14px;background: white;}
+header .nav > .userInteractive .search .searchWrapper button {position: absolute;right: 0;bottom: 0;top: 0;border: none;background: black;color: white;padding: 0px 15px;font-size: 14px;}
+header .nav > .userInteractive .search .searchWrapper.active {opacity: 1;visibility: visible;}
+
+span.overlay {position: fixed;right: 0;left: 0;top: 0;bottom: 0;background: white;z-index: 99;opacity: 0;transition: all ease .4s;visibility: hidden;}
+span.overlay.active {opacity: .8;visibility: visible;}
+span#closeMenu img {width: 22px;}
+span#closeMenu {top: 0;display: block;left: 0;position: absolute;}
+
+header .nav > .menu ul.menuList::-webkit-scrollbar {width: 5px;height: 3px;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-button {width: 6px;height: 6px;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-thumb {background: #d7d7d7;border: 0px none #000000;border-radius: 100px;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-thumb:hover {background: #afafaf;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-thumb:active {background: #9a9a9a;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-track {background: #f9000000;border: 0px none #ffffff;border-radius: 100px;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-track:hover {background: #transparent;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-track:active {background: #ffffff;}
+header .nav > .menu ul.menuList::-webkit-scrollbar-corner {background: transparent;}
+
+header .nav > .userInteractive > a img {display: none;}
+header .nav > .userInteractive .cart p#openCart img {display: none;}
+
+header .nav > .menu {}
+header .nav > .menu img {cursor: pointer;}
+header .nav > .menu ul.menuList {position: absolute;z-index: 100;width: 300px;opacity: 0;visibility: hidden;transition: all ease .4s;padding-top: 40px;height: 90vh;overflow: auto;margin-top: -30px;}
+header .nav > .menu ul.menuList.active {opacity: 1;visibility: visible;}
+header .nav > .menu ul.menuList > li {}
+header .nav > .menu ul.menuList > li > a {font-size: 15px;font-weight: 700;color: black;}
+header .nav > .menu ul.menuList > li > h2 {font-size: 15px;font-weight: 700;color: black;display: inline;cursor: pointer;}
+header .nav > .menu ul.menuList > li > ul.altList {margin-bottom: 15px;}
+header .nav > .menu ul.menuList > li > ul.altList li {}
+header .nav > .menu ul.menuList > li > ul.altList li h3 {font-size: 15px;color: black;margin-left: 10px;font-weight: 600;border-bottom: 1px solid transparent;transition: all ease .4s;}
+header .nav > .menu ul.menuList > li > ul.altList li h3 {line-height: 21px;margin: 0;padding: 0;display: inline;margin-left: 10px;cursor: pointer;}
+header .nav > .menu ul.menuList > li > ul.altList li h3 a{line-height: 21px;margin: 0;padding: 0;display: inline;color: black;cursor: pointer;}
+header .nav > .menu ul.menuList > li > a:hover {border-bottom: 1px solid #927442!important;}
+header .nav > .menu ul.menuList > li > ul.altList li a:hover {border-bottom: 1px solid #927442!important;}
+
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink {margin-bottom: 25px;opacity: 0;visibility: hidden;margin: 0;transition: all ease .4s;}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink li {}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink li h4 {display: inline-flex;line-height: 24px;}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink li h4 a {font-size: 15px;color: black;margin-left: 35px;border-bottom: 1px solid transparent;transition: all ease .4s;}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink.active {opacity: 1;visibility: visible;margin-bottom: 25px;}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink li {height: 0px;transition: all ease .4s;}
+header .nav > .menu ul.menuList > li > ul.altList li ul.categoriesLink.active li {height: 27px;}
+section.index {min-height: 400px;}
+
+
+section.about {}
+section.about img {width: 100%;margin-bottom: 50px;}
+section.about p {text-align: center;line-height: 25px;font-size: 16px;font-weight: 600;text-transform: uppercase;margin-bottom: 40px;}
+
+
+
+section.login {min-height: 60vh;display: flex;align-items: center;margin: 90px 0px;}
+section.login form {}
+section.login h2 {font-weight: bold;font-size: 27px;margin-bottom: 30px;}
+section.login form .item {margin-bottom: 10px;}
+section.login form .item input {width: 100%;max-width: 300px;border: none;border-bottom: 1px solid black;padding: 5px;margin-bottom: 15px;}
+section.login form .item label {display: block;font-size: 13px;font-weight: 600;}
+section.login form button {width: 100%;max-width: 300px;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin-top: 40px;}
+
+section.login form a {display: block;font-size: 11px;font-weight: 600;color: black;text-decoration: underline gainsboro;}
+section.login form.signup-form{display: none;}
+section.login .signUp p {font-size: 13px;font-weight: 600;margin-bottom: 30px;}
+section.login .signUp button {display: flex;align-items: center;width: 300px;margin-bottom: 10px;font-size: 13px;border: 0;font-weight: 600;color: white;padding: 10px;}
+section.login .signUp button.facebook {background: #0a549d;}
+section.login .signUp button.google {background: #f05050;}
+section.login .signUp button img {width: 27px;margin-right: 12px;}
+section.login .signUp button.google img {filter: invert(1);}
+section.login .signUp button.createAccount {background: black;padding: 16px;justify-content: center;}
+section.login .signUp span.or {display: block;margin: 50px 0px;text-align: center;width: 300px;position: relative;}
+section.login .signUp span.or:before {content: '';position: absolute;top: 12px;right: 0;left: 0;border-bottom: 1px solid black;}
+section.login .signUp span.or b {position: relative;z-index: 2;background: white;padding: 0px 10px;font-size: 14px;}
+section.login form .item.checkboxes {position: relative;width: 300px;}
+section.login form .item.checkboxes input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.login form .item.checkboxes label {font-size: 11px;padding-left: 23px;cursor: pointer;text-decoration: underline lightgray;transition: all ease .4s;}
+section.login form .item.checkboxes label:before {content: '';position: absolute;left: 0;width: 17px;height: 17px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.login form .item.checkboxes input:checked + label:before {background-size: 12px;}
+section.login form .item.checkboxes input:checked + label {text-decoration: underline black;}
+
+section.account {min-height: 500px;}
+section.account h2 {text-align: center;margin-top: 50px;}
+section.account ul {display: flex;justify-content: center;margin: 35px;margin-bottom: 55px;}
+section.account ul li {margin: 0px 20px;}
+section.account ul li a {color: black;font-size: 16px;padding: 0px 15px;font-weight: 600;position: relative;}
+section.account ul li a.active {border-bottom: 2px solid black;}
+section.account ul li a:before {content: '';position: absolute;bottom: -2px;right: 0;left: 0;width: 0;border-bottom: 2px solid black;margin: auto;transition: all ease .4s;}
+section.account ul li a:hover:before {width: 22px;}
+
+section.account.detail div.accountSettings {max-width: 760px;margin: auto;margin-bottom: 50px;}
+section.account.detail div.accountSettings .item {margin-bottom: 20px;}
+section.account.detail div.accountSettings .item label {width: 100%;font-size: 14px;}
+section.account.detail div.accountSettings .item input {width: 100%;border: 1px solid black;padding: 7px;height: 40px;}
+section.account.detail div.accountSettings .passwordChangeWrapper .item {display: flex;align-items: center;}
+section.account.detail div.accountSettings .passwordChangeWrapper {}
+section.account.detail div.accountSettings .passwordChangeWrapper h3 {font-size: 16px;margin-top: 50px;margin-bottom: 20px;border-bottom: 2px solid black;padding-bottom: 10px;max-width: 270px;}
+section.account.detail div.accountSettings button {width: 100%;max-width: 300px;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;}
+
+section.account.address {}
+section.account.address .accountAddress {max-width: 760px;margin: auto;}
+section.account.address .accountAddress > p {text-align: center;margin-bottom: 20px;font-size: 15px;}
+section.account.address .accountAddress .wrapper {margin-bottom: 20px;}
+section.account.address .accountAddress .wrapper .item {border: 1px solid black;padding: 10px;position: relative;}
+section.account.address .accountAddress .wrapper .item h3 {font-size: 16px;font-weight: 600;margin-bottom: 10px;}
+section.account.address .accountAddress .wrapper .item h4 {font-size: 16px;margin-bottom: 10px;}
+section.account.address .accountAddress .wrapper .item h5 {font-weight: 400;font-size: 16px;margin-bottom: 10px;}
+section.account.address .accountAddress .wrapper .item h6 {margin-bottom: 5px;}
+section.account.address .accountAddress .wrapper .item p {margin: 15px 0px;}
+section.account.address .accountAddress .wrapper .item .edit {position: absolute;right: 15px;top: 15px;cursor: pointer;transition: all ease .4s;padding: 5px;}
+section.account.address .accountAddress .wrapper .item .edit:hover {border-bottom: 1px solid black;}
+
+section.account.address .accountAddress button {width: 100%;max-width: 300px;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin: auto;display: block;}
+section.account.address .addNewAddress {position: fixed;right: 0;left: 0;top: 0;z-index: 99;background: white;max-width: 800px;margin: 50px auto;border: 2px solid black;padding: 20px;max-height: 88vh;overflow: auto;box-shadow: 5px 5px black;opacity: 0;visibility: hidden;transition: all ease .4s;}
+section.account.address .addNewAddress.active{opacity: 1;visibility: visible;}
+section.account.address .addNewAddress span#closeNewAddress {position: absolute;right: 20px;width: 25px;cursor: pointer;}
+section.account.address .addNewAddress h2 {margin: 0;margin-bottom: 30px;font-size: 20px;}
+
+
+section.account.address .addNewAddress .formItem {margin-bottom: 14px;}
+section.account.address .addNewAddress .checkBoxGroup {margin-bottom: 20px;position: relative;display: flex;justify-content: center;}
+section.account.address .addNewAddress .checkBoxGroup input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.account.address .addNewAddress .checkBoxGroup label {font-size: 14px;padding-left: 23px;cursor: pointer;transition: all ease .4s;}
+section.account.address .addNewAddress .checkBoxGroup label:before {content: '';position: absolute;left: 0;width: 17px;height: 17px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.account.address .addNewAddress .checkBoxGroup input:checked + label:before {background-size: 12px;}
+section.account.address .addNewAddress .checkBoxGroup input:checked + label {text-decoration: underline black;}
+section.account.address .addNewAddress .formItem label {width: 100%;}
+section.account.address .addNewAddress button {width: 100%;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin-top: 40px;}
+section.account.address .addNewAddress .formItem input , section.account.address .addNewAddress .formItem select {width: 100%;border: 1px solid black;padding: 7px;font-size: 14px;}
+section.account.address .addNewAddress .formItemGroup {display: flex;}
+section.account.address .addNewAddress .formItemGroup .formItem {flex: 1;}
+section.account.address .addNewAddress .formItemGroup .formItem:nth-child(2) {margin: 0px 10px;}
+section.account.address .addNewAddress .billingInformation {display:none;}
+section.account.address .addNewAddress .billingInformation h4 {font-size: 16px;margin-top: 40px;margin-bottom: 15px;border-bottom: 2px solid black;padding-bottom: 10px;max-width: 270px;}
+section.account.address .addNewAddress .checkBoxGroup .item {position: relative;}
+
+.blankWrapper {text-align: center;padding: 10px;background: black;color: white;margin: 15px 0px;font-size: 15px;font-weight: 300;}
+
+section.account.orders {}
+section.account.orders .accountOrders {}
+section.account.orders .accountOrders .blankOrder {display: flex;padding: 10px;max-width: 780px;margin: auto;background: gainsboro;align-items: center;}
+section.account.orders .accountOrders .blankOrder a {background: black;padding: 9px;color: white;margin-right: 20px;}
+section.account.orders .accountOrders .orders {margin: 50px;}
+section.account.orders .accountOrders .orders .item {display: flex;justify-content: space-between;margin-bottom: 25px;}
+section.account.orders .accountOrders .orders .item a {width: 160px;display: block;}
+section.account.orders .accountOrders .orders .item a img {}
+section.account.orders .accountOrders .orders .item .content {width: 50%;}
+section.account.orders .accountOrders .orders .item .content span.status {font-size: 16px;font-weight: 600;color: #2dda95;margin-bottom: 3px;display: block;}
+section.account.orders .accountOrders .orders .item .content p {font-weight: 600;margin-bottom: 3px;color: gray;font-size: 14px;}
+section.account.orders .accountOrders .orders .item .content p.orderNumber {color: black;font-size: 16px;}
+section.account.orders .accountOrders .orders .item a.cargoTrack {width: 270px;background: black;height: 49px;display: flex;justify-content: center;align-items: center;color: white;font-weight: 600;font-size: 16px;}
+section.account.orders .accountOrders .orders .item:not(:first-child) {border-top: 1px solid gainsboro;padding-top: 25px;}
+
+
+section.account.wishlist .accountWishlist .blankOrder {display: flex;padding: 10px;max-width: 780px;margin: auto;background: gainsboro;align-items: center;}
+section.account.wishlist .accountWishlist .blankOrder a {background: black;padding: 9px;color: white;margin-right: 20px;}
+
+section.account.wishlist .accountWishlist {max-width: 1090px;margin: auto;}
+section.account.wishlist .accountWishlist .item {margin-bottom: 30px;position: relative;}
+section.account.wishlist .accountWishlist .item a {display: block;text-align: center;}
+section.account.wishlist .accountWishlist .item img {margin: 5px auto;}
+section.account.wishlist .accountWishlist .item p {font-size: 15px;padding: 0px 20px;color: black;margin-bottom: 25px;}
+section.account.wishlist .accountWishlist .item span {color: black;}
+
+section.account.wishlist .accountWishlist .item span.remove {color: white;font-size: 13px;background: black;padding: 2px 6px;position: absolute;bottom: -10px;left: 37px;transition: all ease .4s;opacity: 0;visibility: hidden;cursor: pointer;}
+section.account.wishlist .accountWishlist .item:hover span.remove {opacity: .2;visibility: visible;bottom: 2px;}
+section.account.wishlist .accountWishlist .item span.remove:hover {color: white;opacity: 1;}
+
+
+
+section.listing {max-width: 1000px;margin: 80px auto;}
+section.listing a {display: block;color: black;margin-bottom: 50px;position: relative;}
+section.listing a h2 {font-size: 15px;margin: 5px 0px;font-weight: 400;display: flex;justify-content: space-between;margin-bottom: -5px;}
+section.listing a p {margin: 7px 0px;letter-spacing: 1px;}
+section.listing a h2 span {
+	font-size: 12px;
+	white-space: nowrap;
+	color: gray;
+}
+section.listing a img {width: 100%;}
+
+span.listingBadge {border: 10px solid;border-image-slice: 1;border-width: 2px;border-image-source: linear-gradient(to right, #EFE3CB, #796242);padding: 3px 15px;font-size: 14px;font-weight: 600;color: #b9a07e;display: inline-block;}
+span.listingBadge{position: relative;}
+span.listingBadge::before {content: '';width: 0;height: 0;position: absolute;right: -2px;bottom: -2px;border: 6px solid #ffffff;border-top-color: #fb101000;border-left-color: transparent;}
+span.listingBadge::after{content: '';width: 16px;position: absolute;right: -4px;bottom: 4px;border-bottom: 2px solid #7a6343;transform: rotate(-46deg);}
+
+
+section.listing a img:first-child {position: absolute;z-index: 2;opacity: 0;transition: all ease .4s;}
+section.listing a:hover img:first-child {opacity: 1;}
+section.listing a p span {color: #bdbbbb;text-decoration: line-through;font-size: 13px;}
+
+section.productDetail {}
+section.productDetail a.productImages img {margin: 0px -15px;}
+section.productDetail button.addToWishlist {width: 34px;border: 0;display: block;margin-left: auto;}
+section.productDetail .content {}
+section.productDetail .content > p {font-weight: bold;}
+section.productDetail .content h3 {font-size: 19px;margin: 10px 0px;}
+section.productDetail .content p {font-weight: 600;font-size: 14px;}
+section.productDetail .content h2 {font-size: 21px;font-weight: bold;margin: 15px 0px;border-bottom: 1px solid gainsboro;padding-bottom: 15px;}
+section.productDetail .interactions {}
+section.productDetail .interactions .size {display: flex;}
+section.productDetail .interactions .size select {width: 100%;padding: 0px 9px;font-weight: 600;}
+section.productDetail .interactions .size button {width: 100%;margin-left: 15px;border: 0;background: black;color: white;padding: 10px;font-weight: 500;}
+section.productDetail .interactions .colours {display: flex;margin: 15px 0px;}
+section.productDetail .interactions .colours .color {position: relative;margin-right: 10px;}
+section.productDetail .interactions .colours .color label {height: 40px;width: 40px;border: 1px solid black;cursor: pointer;}
+section.productDetail .interactions .colours .color input {opacity: 0;position: absolute;left: 0;}
+section.productDetail .interactions .colours .color input:checked + label {}
+section.productDetail .detailConsole .interactions > button {background: black;border: none;color: white;width: 100%;height: 41px;font-weight: 600;margin-bottom: 20px;}
+section.productDetail .interactions .fittest {border-top: 1px solid gainsboro;padding-top: 15px;}
+section.productDetail .interactions .details h3 {font-size: 14px;margin-bottom: 15px;font-weight: 600;cursor: pointer;}
+section.productDetail .interactions .details ul {height: 0;overflow: hidden;}
+section.productDetail .interactions .details ul li {padding-left: 18px;font-size: 14px;font-weight: 300;margin-bottom: 5px;position: relative;margin-left: 3px;}
+section.productDetail .interactions .details ul li:before {content: '';width: 5px;height: 5px;position: absolute;left: 0;top: 50%;background: black;border-radius: 50%;transform: translateY(-65%);}
+section.productDetail .interactions .fittest h3 {font-size: 14px;margin-bottom: 15px;font-weight: 600;cursor: pointer;cursor: pointer;}
+section.productDetail .interactions .more h3 {font-size: 14px;margin-bottom: 15px;font-weight: 600;}
+section.productDetail .interactions .more {border-top: 1px solid gainsboro;padding-top: 20px;}
+section.productDetail .interactions .more ul li {padding-left: 18px;font-size: 14px;font-weight: 300;margin-bottom: 5px;position: relative;margin-left: 3px;}
+section.productDetail .interactions .more ul li:before {content: '';width: 5px;height: 5px;position: absolute;left: 0;top: 50%;background: black;border-radius: 50%;transform: translateY(-65%);}
+section.productDetail .interactions h3 span.trigger {width: 25px;height: 2px;display: block;background: black;border-radius: 50px;position: absolute;right: 30px;top: 6px;}
+section.productDetail .interactions h3 {position: relative;}
+section.productDetail .interactions .details {border-top: 1px solid gainsboro;padding-top: 20px;}
+
+section.productDetail .wearWith .item {flex: 1;margin: 2px;}
+section.productDetail .wearWith {display:flex;margin: 0px -10px;}
+section.productDetail .wearWith a {display: block;color: black;margin-bottom: 50px;position: relative;}
+section.productDetail .wearWith a h2 {font-size: 14px;margin: 5px 0px;font-weight: 400;display: flex;justify-content: space-between;margin-bottom: -5px;}
+section.productDetail .wearWith a p {margin: 7px 0px;letter-spacing: 1px;}
+section.productDetail .wearWith a h2 span {margin-right: 10px;}
+section.productDetail .wearWith a img {width: 100%;}
+
+section.productDetail .content p:last-child {font-size: 12px;color: gray;}
+
+
+span.listingBadge {border: 10px solid;border-image-slice: 1;border-width: 2px;border-image-source: linear-gradient(to right, #EFE3CB, #796242);padding: 3px 15px;font-size: 14px;font-weight: 600;color: #b9a07e;display: inline-block;}
+span.listingBadge{position: relative;}
+span.listingBadge::before {content: '';width: 0;height: 0;position: absolute;right: -2px;bottom: -2px;border: 6px solid #ffffff;border-top-color: #fb101000;border-left-color: transparent;}
+span.listingBadge::after{content: '';width: 16px;position: absolute;right: -4px;bottom: 4px;border-bottom: 2px solid #7a6343;transform: rotate(-46deg);}
+
+
+section.productDetail h3.toWearTitle {text-align: center;margin-top: 90px;margin-bottom: 30px;font-size: 16px;font-weight: 600;}
+
+section.cart {}
+
+section.cart h2 {text-align: center;margin-top: 50px;font-size: 24px;font-weight: bold;margin-bottom: 15px;}
+section.cart .Area {display: flex;margin: auto;}
+section.cart .Area .items {flex: 40%;border: 2px solid black;margin-right: -2px;}
+section.cart .Area .addittion {border: 2px solid black;padding: 20px;position: relative;flex: 5%;height: 225px;}
+section.cart .Area .items .item {display: flex;align-items: end;padding-top: 12px;position: relative;justify-content: space-between;padding: 15px;}
+section.cart .Area .addittion .buttonGroup {position: absolute;top: calc(100% + 12px);display: flex;width: 100%;left: 0;}
+section.cart .Area .addittion .buttonGroup button {width: 100%;white-space: nowrap;border: 0;background: black;color: white;font-size: 14px;padding: 14px 0px;font-weight: 600;}
+section.cart .Area .addittion .buttonGroup button:first-child {margin: 0px 10px;}
+section.cart .Area .items .item a {display: block;width: 130px;}
+section.cart .Area .items .item a img {}
+section.cart .Area .items .item .productName {padding: 0px 15px;font-weight: 600;margin-top: 20px;width: 207px;}
+section.cart .Area .items .item select {margin: 5px;padding: 9px;margin-top: 20px;color: gray;font-size: 15px;}
+section.cart .Area .items .item .color {min-width: 40px;height: 40px;display: block;border: 1px solid black;margin: 10px;margin-top: 20px;}
+section.cart .Area .items .item .price {width: 150px;margin-top: 27px;font-weight: 500;text-align: center;}
+section.cart .Area .items .item .actions {position: absolute;right: 15px;bottom: 15px;}
+section.cart .Area .addittion p {display: flex;justify-content: space-between;font-size: 15px;margin-bottom: 9px;}
+section.cart .Area .addittion p span {position: absolute;opacity: .1;}
+section.cart .Area .items .item .actions button {border: none;border-bottom: 1px solid gainsboro;font-size: 13px;padding: 0;padding-bottom: 3px;margin-right: 11px;color: gray;transition: all ease .4s;}
+section.cart .Area .items .item .actions button:hover {color: black;}
+section.cart .Area .addittion .buttonGroup button:last-child {margin-right: -3px;}
+section.cart .Area .items .item:not(:first-child) {border-top: 1px solid gainsboro;}
+section.cart .Area .addittion p.total {border-top: 2px solid black;border-bottom: 2px solid black;padding: 15px 0px;font-weight: bold;font-size: 16px;margin-top: 30px;}
+section.cart .Area .addittion p b {font-weight: 500;}
+
+section.payment {max-width: 800px;margin: auto;}
+section.payment h2 {font-weight: bold;font-size: 24px;text-align: center;margin-bottom: 30px;}
+section.payment ul {display: flex;align-items: center;justify-content: center;margin-bottom: 40px;}
+section.payment ul li {margin: 10px;}
+section.payment ul li a {padding: 10px;color: black;font-weight: 600;}
+section.payment ul li a.active {border-bottom: 2px solid black;}
+section.payment form {
+}
+section.payment form .inputgroup {margin-bottom: 10px;display: flex;width: 100%;}
+section.payment form .inputgroup label {display: block;font-size: 14px;font-weight: bold;color: #c1c1c1;}
+section.payment form .inputgroup input {width: 100%;border: none;border-bottom: 1px solid black;padding: 10px 0px;}
+section.payment form .inputgroup .item {width: 100%;margin: 10px;}
+section.payment form .inputgroup input::placeholder {color: gainsboro;}
+.jp-card .jp-card-front .jp-card-lower .jp-card-name {text-transform: unset!important;}
+
+section.payment form .inputgroup .guvenliode {}
+
+section.payment form .guvenliode {position: relative;display: flex;justify-content: center;width: 213px;align-items: center;margin: 30px auto;}
+section.payment form .guvenliode input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.payment form .guvenliode label {font-size: 14px;padding-left: 23px;cursor: pointer;transition: all ease .4s;}
+section.payment form .guvenliode label:before {content: '';position: absolute;left: -5px;width: 25px;top: -3px;height: 25px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.payment form .guvenliode input:checked + label:before {background-size: 12px;}
+section.payment form .guvenliode input:checked + label {text-decoration: underline black;}
+
+
+
+section.payment form .inputgroup .installment {}
+section.payment form .installment .info {text-align: center;margin: 20px 0px;font-size: 14px;color: gray;}
+section.payment form table {width: 100%;max-width: 600px;margin: 35px auto;}
+section.payment form table thead tr {border-bottom: 1px solid gainsboro;}
+section.payment form table thead tr th {padding: 10px 0px;font-weight: 300;}
+section.payment form table thead tr th:not(:first-child) {text-align: center;}
+section.payment form table tbody tr td:not(:first-child) {text-align: center;}
+section.payment form table tbody tr td {padding: 15px 0px;border-bottom: 1px solid gainsboro;position:relative;font-weight: 300;}
+
+
+section.payment form table input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.payment form table label {font-size: 17px;cursor: pointer;transition: all ease .4s;font-weight: 300;border-bottom: 1px solid transparent;}
+section.payment form table label:before {content: '';position: absolute;left: -29px;width: 20px;top: 55%;transform: translateY(-50%);height: 20px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.payment form table input:checked + label:before {background-size: 12px;}
+section.payment form table input:checked + label {border-bottom: 1px solid black;color: black}
+
+
+section.payment .contract-area input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.payment .contract-area label {font-size: 13px;cursor: pointer;transition: all ease .4s;font-weight: 300;border-bottom: 1px solid transparent;color: gray;}
+section.payment .contract-area label:before {content: '';position: absolute;left: -29px;width: 20px;top: 55%;transform: translateY(-50%);height: 20px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.payment .contract-area input:checked + label:before {background-size: 12px;}
+section.payment .contract-area input:checked + label {border-bottom: 1px solid black;color: black}
+
+section.payment .contract-area .item {position: relative;width: 330px;margin: auto;margin-bottom: 5px;}
+section.payment .contract-area label a {color: black;}
+section.payment .contract-area label a:hover {font-weight: 600;}
+
+
+section.payment .amountArea {margin-top: 20px;}
+section.payment .amountArea p {text-align: center;font-size: 24px;margin-bottom: 5px;}
+section.payment form  button {background: black;border: 0;color: white;padding: 15px 50px;font-weight: 600;margin: 10px auto;display: block;}
+section.payment .card-area {margin-bottom: 30px;}
+
+
+section.cartShipping {max-width: 990px;margin: auto;}
+section.cartShipping h2 {font-weight: bold;font-size: 24px;text-align: center;margin-bottom: 30px;}
+section.cartShipping ul {display: flex;align-items: center;justify-content: center;margin-bottom: 40px;}
+section.cartShipping ul li {margin: 10px;}
+section.cartShipping ul li a {padding: 10px;color: black;font-weight: 600;}
+section.cartShipping ul li a.active {border-bottom: 2px solid black;}
+
+
+
+section.cartShipping {}
+section.cartShipping .accountAddress {max-width: 760px;margin: auto;}
+section.cartShipping .accountAddress > p {text-align: center;margin-bottom: 20px;font-size: 15px;}
+section.cartShipping .accountAddress .wrapper {margin-bottom: 20px;}
+section.cartShipping .accountAddress .wrapper .item {border: 1px solid black;padding: 10px;position: relative;}
+section.cartShipping .accountAddress .wrapper .item h3 {font-size: 16px;font-weight: 600;margin-bottom: 10px;}
+section.cartShipping .accountAddress .wrapper .item h4 {font-size: 16px;margin-bottom: 10px;}
+section.cartShipping .accountAddress .wrapper .item h5 {font-weight: 400;font-size: 16px;margin-bottom: 10px;}
+section.cartShipping .accountAddress .wrapper .item h6 {margin-bottom: 5px;}
+section.cartShipping .accountAddress .wrapper .item p {margin: 15px 0px;}
+section.cartShipping .accountAddress .wrapper .item .edit {position: absolute;right: 15px;top: 15px;cursor: pointer;transition: all ease .4s;padding: 5px;}
+section.cartShipping .accountAddress .wrapper .item .edit:hover {border-bottom: 1px solid black;}
+
+section.cartShipping .accountAddress button {width: 100%;max-width: 300px;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin: auto;display: block;}
+section.cartShipping .addNewAddress {position: fixed;right: 0;left: 0;top: 0;z-index: 99;background: white;max-width: 800px;margin: 50px auto;border: 2px solid black;padding: 20px;max-height: 88vh;overflow: auto;box-shadow: 5px 5px black;opacity: 0;visibility: hidden;transition: all ease .4s;}
+section.cartShipping .addNewAddress.active{opacity: 1;visibility: visible;}
+section.cartShipping .addNewAddress span#closeNewAddress {position: absolute;right: 20px;width: 25px;cursor: pointer;}
+section.cartShipping .addNewAddress h2 {margin: 0;margin-bottom: 30px;font-size: 20px;}
+
+section.account.address .accountAddress button {width: 100%;max-width: 300px;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin: auto;display: block;}
+section.account.address .addNewAddress {position: fixed;right: 0;left: 0;top: 0;z-index: 99;background: white;max-width: 800px;margin: 50px auto;border: 2px solid black;padding: 20px;max-height: 88vh;overflow: auto;box-shadow: 5px 5px black;opacity: 0;visibility: hidden;transition: all ease .4s;}
+section.account.address .addNewAddress.active{opacity: 1;visibility: visible;}
+section.account.address .addNewAddress span#closeNewAddress {position: absolute;right: 20px;width: 25px;cursor: pointer;}
+section.account.address .addNewAddress h2 {margin: 0;margin-bottom: 30px;font-size: 20px;}
+
+
+section.cartShipping .addNewAddress .formItem {margin-bottom: 14px;}
+section.cartShipping .addNewAddress .checkBoxGroup {margin-bottom: 20px;position: relative;display: flex;justify-content: center;}
+section.cartShipping .addNewAddress .checkBoxGroup input {opacity: 0;position: absolute;left: 0;top: 0;z-index: -1;}
+section.cartShipping .addNewAddress .checkBoxGroup label {font-size: 14px;padding-left: 23px;cursor: pointer;transition: all ease .4s;}
+section.cartShipping .addNewAddress .checkBoxGroup label:before {content: '';position: absolute;left: 0;width: 17px;height: 17px;background-image: url(../images/tick.svg);border: 1px solid black;background-size: 0;background-repeat: no-repeat;background-position: center;transition: all ease .4s;}
+section.cartShipping .addNewAddress .checkBoxGroup input:checked + label:before {background-size: 12px;}
+section.cartShipping .addNewAddress .checkBoxGroup input:checked + label {text-decoration: underline black;}
+section.cartShipping .addNewAddress .formItem label {width: 100%;}
+section.cartShipping .addNewAddress button {width: 100%;border: 2px solid black;padding: 14px 0px;font-weight: 600;font-size: 13px;background: black;color: white;margin-top: 40px;}
+section.cartShipping .addNewAddress .formItem input , section.cartShipping .addNewAddress .formItem select {width: 100%;border: 1px solid black;padding: 7px;font-size: 14px;}
+section.cartShipping .addNewAddress .formItemGroup {display: flex;}
+section.cartShipping .addNewAddress .formItemGroup .formItem {flex: 1;}
+section.cartShipping .addNewAddress .formItemGroup .formItem:nth-child(2) {margin: 0px 10px;}
+section.cartShipping .addNewAddress .billingInformation {display:none;}
+section.cartShipping .addNewAddress .billingInformation h4 {font-size: 16px;margin-top: 40px;margin-bottom: 15px;border-bottom: 2px solid black;padding-bottom: 10px;max-width: 270px;}
+section.cartShipping .addNewAddress .checkBoxGroup .item {position: relative;}
+
+
+section.cartShipping .orderAddition {margin-top: 20px;}
+
+section.cartShipping .orderAddition h3 {font-size: 18px;padding-bottom: 10px;margin-bottom: 10px;border-bottom: 2px solid black;max-width: 250px;}
+section.cartShipping .orderAddition .wrapper {border: 1px solid #eaeaea;}
+section.cartShipping .orderAddition .wrapper p {display: flex;justify-content: space-between;border-bottom: 1px solid gainsboro;padding: 10px;}
+section.cartShipping .orderAddition .wrapper p.productName {font-weight: 600;align-items: center;}
+section.cartShipping .orderAddition .wrapper p.productName span {width: 50%;text-align: right;}
+section.cartShipping .orderAddition .wrapper p:last-child {border: none;}
+
+
+section.cartShipping .blankWrapper a {background: white;color: black;font-weight: 500;padding: 10px 20px;margin-top: 15px;}
+section.cartShipping a.payBtn {width: 100%;text-align: center;font-weight: 500;background: black;color: white;padding: 15px 0px;font-size: 18px;}
+
+form.customerAddressForm > div > p {padding: 10px;background: #efefef;text-align: center;margin-bottom: 20px;}
+form.customerAddressForm h3 {font-size: 18px;border-bottom: 2px solid black;}
+form.customerAddressForm label {display: block;width: 100%;margin-top: 10px;}
+form.customerAddressForm .checkGroup {display: flex;}
+form.customerAddressForm .checkGroup label {margin: 0;}
+form.customerAddressForm input {width: 100%;border: 1px solid black;padding: 10px;}
+form.customerAddressForm textarea {width: 100%;height: 130px;padding: 10px;font-size: 16px;}
+form.customerAddressForm select {width: 100%;border: 1px solid black;padding: 10px;}
+form.customerAddressForm button {margin-top: 10px;border: none;background: black;width: 100%;padding: 20px 0px;color: white;font-weight: 500;}
+
+section.collections .collectionTitles {text-align: center;max-width: 800px;margin: auto;}
+section.collections .collectionTitles h1 {font-size: 25px;font-weight: 600;margin-bottom: 30px;margin-top: 60px;}
+section.collections .collectionTitles h2 {font-weight: 300;font-size: 15px;margin-bottom: 20px;}
+section.collections .collectionTitles p {margin: 50px 0px;font-size: 14px;line-height: 25px;color: gray;}
+
+.fancybox-thumbs__list a:before {border: 3px solid black!important;}
+
+section.paymentResult{}
+
+section.paymentResult {max-width: 800px;margin: 50px auto;min-height: 75vh;}
+section.paymentResult h2 {font-weight: bold;font-size: 24px;text-align: center;margin-bottom: 30px;}
+section.paymentResult ul {display: flex;align-items: center;justify-content: center;margin-bottom: 40px;}
+section.paymentResult ul li {margin: 10px;}
+section.paymentResult ul li a {padding: 10px;color: black;font-weight: 600;}
+section.paymentResult ul li a.active {border-bottom: 2px solid black;}
+
+section.paymentResult {}
+section.paymentResult .item {margin: auto;max-width: 280px;background: url('../images/gradient-border.svg');text-align: center;background-size: cover;padding: 50px 0px;height: 270px;margin-bottom: 30px;}
+section.paymentResult .item img {width: 50px;margin: 20px auto;}
+section.paymentResult .item p {font-weight: bold;}
+section.paymentResult .item a {color: gray;margin-top: 15px;text-decoration: underline gainsboro;}
+
+section.contact {max-width: 800px;margin: auto;}
+section.contact h2 {margin: 50px auto;text-align: center;font-weight: bold;}
+section.contact .item {background: url('../images/gbContact.svg');text-align: center;background-repeat: no-repeat;background-size: 100%;height: 421px;display: flex;align-items: center;justify-content: center;}
+section.contact .item.Reverse {background-image: url('../images/gbContactReverse.svg');}
+section.contact .item h2{font-weight: 500;font-size: 30px;margin: 0;text-align: center;}
+section.contact .item p {font-weight: bold;}
+section.contact .item a {color: gray;margin-top: 15px;text-decoration: underline gainsboro;}
+
+section.staticPages {}
+section.staticPages h2 {font-size: 26px;font-weight: 500;margin-bottom: 40px;margin-top: 50px;border-bottom: 1px solid gainsboro;}
+section.staticPages .textArea {font-size: 15px;}
+section.staticPages .textArea * {font-size: 15px;}
+
+section.stockists {margin: 50px 0px;}
+section.stockists .storeFinderWrapper {height: 70vh;overflow: auto;margin-right: -24px;}
+section.stockists .storeFinderWrapper h2 {font-size: 18px;font-weight: 600;margin-bottom: 22px;}
+section.stockists .storeFinderWrapper > p {font-size: 14px;font-weight: 600;}
+section.stockists .storeFinderWrapper > select {font-size: 14px;font-weight: 600;border: 0;margin-top: 15px;width: 80%;}
+section.stockists .storeFinderWrapper .stores {margin-top: 30px;}
+section.stockists .storeFinderWrapper .stores .item {margin-bottom: 30px;transition: all ease .4s;padding: 10px 0px;}
+section.stockists .storeFinderWrapper .stores .item h2 {font-size: 13px;margin-bottom: 10px;}
+section.stockists .storeFinderWrapper .stores .item p {font-size: 12px;margin-bottom: 7px;font-weight: 3090;color: #797979;padding-right: 10px;}
+section.stockists .storeFinderWrapper > button {background: black;color: white;width: 80%;border: 0;font-size: 14px;font-weight: 600;padding: 9px 0px;margin-top: 20px;}
+section.stockists .storeFinderWrapper .stores .item:hover {background: gainsboro;}
+
+section.pageNotFound {height: 80vh;display: flex;align-items: center;justify-content: center;text-align: center;}
+section.pageNotFound p {font-size: 20vh;}
+@keyframes notFoundAnimation {0%   {opacity: 0;}100% {opacity: 1;}}
+section.pageNotFound p span {animation-name: notFoundAnimation ;animation-duration: .5s;opacity: 0; animation-fill-mode: forwards;}
+section.pageNotFound p span:nth-child(1) {animation-delay: 1s;}
+section.pageNotFound p span:nth-child(2) {animation-delay: 1.6s;}
+section.pageNotFound p span:nth-child(3) {animation-delay: 2.2s;}
+section.pageNotFound a {font-size: 14px;color: gray;text-decoration: underline black;}
+
+header .cart .cartWrapper {position: fixed;right: -400px;top: 103px;bottom: -1px;background: white;border: 1px solid black;padding: 20px;z-index: 99;width: 300px;opacity: 0;visibility: hidden;transition: all ease .8s;}
+header .cart .cartWrapper h3 {text-align: center;font-size: 16px;font-weight: 600;margin-bottom: 50px;}
+header .cart .cartWrapper .Area {max-height: calc(100% - 190px);overflow: auto;padding-right: 15px;}
+header .cart .cartWrapper .Area .item {display: flex;margin-bottom: 25px;}
+header .cart .cartWrapper .Area .item img {width: 90px;}
+header .cart .cartWrapper .Area::-webkit-scrollbar{width: 4px;height: 4px;}
+header .cart .cartWrapper .Area::-webkit-scrollbar-thumb{background: #B3AFB3;border-radius: 0px;}
+header .cart .cartWrapper .Area::-webkit-scrollbar-thumb:hover{background: #B3AFB3;}
+header .cart .cartWrapper .Area::-webkit-scrollbar-track{background: #F0F0F0;border-radius: 0px;box-shadow: inset 0px 0px 0px 0px #F0F0F0;}
+header .cart .cartWrapper .Area .item .content p a {font-size: 12px;font-weight: 400;}
+header .cart .cartWrapper .Area .item .content b {margin-top: 8px;display: inline-block;font-size: 14px;font-weight: 600;}
+header .cart .cartWrapper .cartFooter {}
+header .cart .cartWrapper .cartFooter .qty {text-align: center;margin: 10px 0px;font-size: 14px;color: gray;padding: 12px 0px;}
+header .cart .cartWrapper .cartFooter .total {font-weight: 600;font-size: 14px;text-align: right;border-top: 1px solid black;margin: 0px -20px;padding: 0px 20px;padding-top: 10px;}
+header .cart .cartWrapper .Area .item .content p a:hover {color: #927442;}
+header .cart .cartWrapper .cartFooter .links {display: flex;justify-content: space-between;margin: 10px -10px;}
+header .cart .cartWrapper .cartFooter .links a {font-size: 13px;padding: 5px;color: gray;text-decoration: underline gainsboro;}
+header .cart .cartWrapper span#closeCart {position: absolute;right: 0;width: 40px;padding: 10px;top: 10px;cursor: pointer;}
+header .cart .cartWrapper.active {right: 0;opacity: 1;visibility: visible;}
+
+footer p.selectToggle {display: flex;position: relative;width: 170px;cursor: pointer;}
+footer p.selectToggle img {position: absolute;right: 0;width: 13px;top: 50%;transform: translateY(-50%) rotate(-90deg);}
+footer .countrySelect select {width: 170px;display: block;height: 0;opacity: 0;transition: all ease .4s .7s;font-size: 12px;padding: 0px 5px;}
+footer .countrySelect.active select {height: 30px;opacity: 1;margin-top: 10px;margin-bottom: 20px;transition: all ease .4s;}
+
+section.customer-service {min-height: 60vh;}
+section.customer-service h2 {margin-top: 80px;margin-bottom: 50px;text-align: center;font-size: 30px;font-weight: 600;}
+section.customer-service h3 {font-size: 19px;font-weight: 600;margin-bottom: 10px;}
+section.customer-service .col-md-12 p {text-align: center;}
+section.customer-service .col-md-6 {margin-top: 90px;}
+section.customer-service .col-md-6 p {margin-bottom: 12px;}
+section.customer-service .col-md-6 a {background: black;color: white;padding: 8px 20px;display: block;width: 180px;text-align: center;font-size: 16px;font-weight: 600;}
+
+
+.sizesWrapper {position: fixed;top: 0;right: 0;left: 0;bottom: 0;background: #ffffffc2;z-index: 77;transition: all ease .6s;opacity: 0;visibility: hidden;}
+.sizesWrapper span#closeSizesWrapper {position: absolute;right: 40px;top: 40px;padding: 15px;cursor: pointer;}
+.sizesWrapper span#closeSizesWrapper img {width: 30px;}
+.sizesWrapper > img {margin: 20px auto;box-shadow: 0px 0px 38px 71px white;}
+.sizesWrapper.active {opacity: 1;visibility: visible;}
+
+section.productDetail .interactions .fittest h3 {cursor: pointer;}
+section.productDetail .interactions .details ul.active {height: 100%;}
+section.productDetail .detailConsole {position: sticky;top: 10px;max-height: 90vh;overflow: auto;}
+
+section.bespoke {max-width: 1000px;margin: 90px auto;}
+section.bespoke .bodyWrapper {display: flex;align-items: flex-start;}
+section.bespoke .bodyWrapper .inputsWrapper {}
+section.bespoke .bodyWrapper .inputsWrapper .inputGroup {max-width: 210px;margin-bottom: 5px;}
+section.bespoke .bodyWrapper .inputsWrapper .inputGroup b {}
+section.bespoke .bodyWrapper .inputsWrapper .inputGroup input {width: 60px;margin-bottom: 6px;position: relative;margin-left: 15px;top: -7px;}
+section.bespoke .bodyWrapper .inputsWrapper .inputGroup label {display: block;font-size: 12px;}
+section.bespoke .bodyWrapper .inputsWrapper .inputGroup span {position: absolute;}
+
+
+section.bespoke .bespokeInteractive textarea {resize: none;height: 120px;font-size: 14px;width: 100%;padding: 10px;}
+section.bespoke .bespokeInteractive a {display: block;width: 180px;background: black;margin-top: 10px;padding: 10px;text-align: center;color: white;font-size: 14px;font-weight: 500;}
+.fancybox-bg{background: black!important;}
+.fancybox-progress {background: white!important;}
+section.collections .col-6 a {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 991px){
+	header .nav {padding: 35px;justify-content: center;}
+	header .nav > .userInteractive {margin-left: unset;}
+	header .nav > a {margin: auto;}
+	header .nav > .userInteractive > a >span {display: none;}
+	header .nav > .userInteractive > a > img {display: block;width: 20px;}
+	header .nav > .userInteractive .cart p#openCart img {display: block;width: 20px;}
+	header .nav > .userInteractive .cart p#openCart > a {display: none;}
+	footer ul {min-width: 145px;margin: auto;margin-bottom: 60px;}
+	footer div.subscribe {display: block;margin: auto;text-align: center;}
+	footer div.subscribe form {margin: auto;}
+	section.account ul li {margin: 0px 10px;}
+	section.account ul li a {padding: 0;}
+	section.account ul {margin: 30px 0px;justify-content: space-around;}
+	section.cart .Area {display: block;}
+	section.cart .Area .items .item {display: block;text-align: center;}
+	section.cart .Area .items .item a {margin: auto;}
+	section.cart .Area .items .item .productName {width: 100%;}
+	section.cart .Area .items .item .color {width: 40px;margin: 10px auto;}
+	section.cart .Area .items .item .price {margin: 20px auto;font-size: 20px;}
+	section.cart .Area .items .item .actions {position: unset;}
+	section.cart .Area .items .item .actions button {margin: 7px;}
+	section.cart .Area .addittion {border-top: 0;}
+	section.cart .Area .items {margin: 0;}
+	section.cart .Area .addittion .buttonGroup button {font-size: 11px;}
+	section.cart .Area .addittion .buttonGroup button:first-child {margin: 0;margin-right: 10px;}
+	section.stockists .storeFinderWrapper > p {font-size: 12px;}
+	section.stockists .storeFinderWrapper > select {font-size: 10px;}
+	section.pageNotFound p {
+		white-space: nowrap;
+		font-size: 90px;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	header .nav > a {order: 3;margin: 20px auto;width: calc(100% - 20px);}
+	header .nav {padding: 15px;justify-content: space-between;}
+	header .nav > .userInteractive .search {width:23px}
+	header .nav > .userInteractive > a > img {width:23px}
+	header .nav > .userInteractive .cart p#openCart img {width:23px}
+	.plyr__controls.om-controls {padding: 10px;}
+	section.index {min-height: 150px;}
+	footer {text-align: center;}
+	footer p.selectToggle {margin: auto;}
+	.countrySelect.active {margin: auto;}
+	footer ul li {text-align: center;}
+	footer .countrySelect select {width: 100%;}
+	footer .countrySelect select {transition: all ease .4s;}
+	section.account.orders .accountOrders .orders .item {display: block;text-align: center;margin: auto;}
+	section.account.orders .accountOrders .orders .item:not(:first-child) {margin-top: 30px;}
+	section.account.orders .accountOrders .orders .item a {margin: auto;}
+	section.account.orders .accountOrders .orders .item .content {width: 100%;}
+	section.account.detail div.accountSettings button {max-width: 100%;}
+	span.listingBadge {font-size: 10px;}
+	section.productDetail a.productImages img {margin: 0;}
+	section.productDetail .wearWith {display: block;white-space: nowrap;overflow: auto;}
+	section.productDetail .wearWith .item {display: inline-block;width: 200px;margin-right: 30px;}
+	section.productDetail .wearWith a h2 {white-space: normal;font-size: 13px;font-weight: 500;margin-bottom: 12px;}
+	section.productDetail .wearWith a h2 span {white-space: nowrap;margin: 0;margin-left: 10px;}
+	section.productDetail .content h2 {font-size: 16px;}
+	.jp-card {min-width: 100%!important;}
+	section.payment form .inputgroup {display: block;}
+	section.payment form .inputgroup .item {margin: 22px 0;}
+	section.payment form table {width: 250px;font-size: 12px;}
+	section.payment form table label {font-size: 12px;}
+	section.payment form table tbody tr td {white-space: nowrap;}
+	section.payment .contract-area .item {width: 200px;}
+	section.contact .item {height: 350px;width: 300px;margin: auto;}
+	section.stockists .col-md-8 {order: 1;}
+	section.stockists .col-md-4 {order: 2;}
+	section.stockists .storeFinderWrapper {margin: 0;padding-top: 30px;}
+	section.stockists .storeFinderWrapper > select {width: 100%;}
+	section.stockists .storeFinderWrapper > button {width: 100%;}
+	div#map {height: 38vh!important;}
+	section.stockists .storeFinderWrapper > p {font-size: 12px;}
+	section.stockists .storeFinderWrapper > select {font-size: 10px;}
+
+}
+
+
+@media screen and (max-width: 575px){
+	section.login .signUp {width: 300px;margin: auto;}
+	section.login .signUp button {width: 100%;font-size: 12px;}
+	section.login form {width: 300px;margin: 23px auto;}
+	section.account ul {display: block;white-space: nowrap;overflow: auto;padding: 20px 0px;margin: 30px 0px;}
+	section.account ul li {display: inline-block;margin: 4px 15px;}
+	section.listing a h2 {font-size: 13px;font-weight: 500;}
+	section.cartShipping ul li a {font-size: 11px;}
+	section.cartShipping ul li {margin: 0px;}
+	section.payment ul li a {font-size: 11px;}
+	section.payment ul li {margin: 0px;}
+	section.paymentResult ul li a {font-size: 11px;}
+	section.paymentResult ul li {margin: 0px;}
+	section.cartShipping .orderAddition .wrapper p.productName {font-size: 12px;}
+	section.cartShipping .orderAddition .wrapper p.productName span {margin-left: 20px;white-space: nowrap;}
+	header .nav > .userInteractive .search .searchWrapper {top: 90px;right: 20px;left: 20px;}
+	header .nav > .userInteractive .search {position: unset;}
+	header .nav > .userInteractive .search .searchWrapper input{width: 100%;}
+	header .nav > a {width: calc(100% - 10px);}
+
+}
